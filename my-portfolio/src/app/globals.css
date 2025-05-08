@@ -1,0 +1,203 @@
+/* Import your Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+/*  Base gradient & text color */
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: 
+  linear-gradient(217deg, rgb(113, 200, 255), rgba(255, 0, 0, 0) 70.71%), 
+  linear-gradient(127deg, rgb(205, 154, 255), rgba(0, 255, 0, 0) 70.71%), 
+  linear-gradient(336deg, rgb(93, 68, 255), rgba(0, 0, 255, 0) 70.71%);
+  color: #f3f4f6;
+  font-family: 'Inter', sans-serif;    /* body copy */
+  line-height: 1.6;
+  font-size: 1rem;                     /* 16px base */
+}
+
+/* Headings use a contrasting serif */
+h1, h2, h3, h4, h5 {
+  font-family: Georgia, serif;
+  color: #ffffff;
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+/* Specific sizes */
+h1 { font-size: 2.5rem; }   /* 40px */
+h2 { font-size: 2rem; }     /* 32px */
+h3 { font-size: 1.5rem; }   /* 24px */
+
+/* Paragraphs */
+p {
+  margin: 0 0 1rem;  
+  font-size: 1rem;          /* 16px */
+}
+
+/* Code blocks & inline code */
+code {
+  background: rgba(255,255,255,0.2);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: ui-monospace, Menlo, Monaco, monospace;
+  font-size: 0.9rem;         /* 14.4px */
+}
+
+/* Link styles */
+a {
+  color: #f3f4f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Button-style link */
+a.button {
+  display: inline-block;
+  background: rgba(255,255,255,0.25);
+  color: #f3f4f6;
+  padding: 0.5rem 1rem;      /* 8px 16px */
+  border-radius: 4px;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+a.button:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+nav a {
+  margin-left: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Content wrapper */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+
+/* ── Profile Page: Centered Header & Avatar ── */
+/* ── Card wrapper ── */
+.profile-card {
+  background: hsla(230, 100%, 77%, 0.748);
+  border-radius: 1rem;             /* rounded corners */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  padding: 2rem;
+  max-width: 900px;
+  margin: 3rem auto;               /* center on page */
+}
+
+/* Adjust header width to fill the card */
+.profile-header {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.header-img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+.profile-overlay {
+  position: absolute;
+  bottom: -60px;   /* half the avatar height */
+  left: 2rem;      /* inset from left edge */
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgba(255,255,255,0.8);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background: #fff;
+}
+
+.avatar-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* BIO */
+.profile-bio {
+  margin-top: 100px;  /* clear overlay */
+  text-align: center;
+}
+.profile-bio h1 {
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+.profile-bio p {
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+/* TABS */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.tab-button {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.tab-button:hover {
+  background: rgba(255,255,255,0.3);
+}
+.tab-button.active {
+  background: rgba(255,255,255,0.5);
+}
+
+/* TAB CONTENT */
+.tab-content {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.tab-content ul {
+  list-style: none;
+  padding: 0;
+}
+.tab-content li + li {
+  margin-top: 1rem;
+}
+.tab-content a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* icons */
+.contact-link .icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: inline-block;
+}
