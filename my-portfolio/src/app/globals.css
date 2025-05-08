@@ -21,18 +21,19 @@ h1, h2, h3, h4, h5 {
   font-family: Georgia, serif;
   color: #ffffff;
   margin: 0 0 1rem;
-  line-height: 1.2;
+  line-height: 1.6;
 }
 
 /* Specific sizes */
 h1 { font-size: 2.5rem; }   /* 40px */
 h2 { font-size: 2rem; }     /* 32px */
-h3 { font-size: 1.5rem; }   /* 24px */
+h3 { font-size: 1.2rem; }   /* 24px */
 
 /* Paragraphs */
 p {
   margin: 0 0 1rem;  
-  font-size: 1rem;          /* 16px */
+  font-size: .875rem;
+  color: #ffffff;
 }
 
 /* Code blocks & inline code */
@@ -66,18 +67,6 @@ a.button {
 }
 a.button:hover {
   background: rgba(255,255,255,0.35);
-}
-
-/* Navigation */
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-}
-nav a {
-  margin-left: 1.5rem;
-  font-size: 1rem;
 }
 
 /* Content wrapper */
@@ -194,10 +183,159 @@ main {
   text-decoration: underline;
 }
 
-/* icons */
-.contact-link .icon {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  display: inline-block;
+
+/* ── Shared vertical‐stacked card ── */
+.vertical-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s, transform 0.2s;
+}
+.vertical-card:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-4px);
+}
+.vertical-card h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.vertical-card p {
+  color: #f3f4f6;
+  margin: 0.25rem 0;
+  line-height: 1.4;
+}
+
+.vertical-card ul {
+  list-style-type: disc;
+  margin-left: 1.25rem; /* ensure bullets don’t get cut off */
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; /* aligns the date text on the same baseline as the h3 */
+  margin-bottom: 0.75rem;
+}
+
+.card-header h3 {
+  margin: 0; /* reset in case your h3 has bottom margin */
+}
+
+
+
+/* EDUCATION CARDS */
+.education-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* make all lists inside our cards smaller + tighter */
+.education-cards ul {
+  list-style: disc inside;    /* real bullets, inside the text block */
+  padding-left: 1rem;         /* indent the text from the card’s edge */
+  margin: 0.5rem 0;           /* a little breathing room above & below */
+  font-size: 0.875rem;        /* shrink to ~14px */
+  line-height: 1.3;           /* tighten lines just a bit */
+}
+
+/* reduce the gap between each bullet */
+.education-cards li + li {
+  margin-top: 0.25rem;        /* ~4px between items */
+}
+
+/* Right-align the meta line */
+.education-cards .info-meta {
+  margin: 0;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+
+/* PROJECT CARDS */
+.project-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* EXPERIENCE CARDS */
+.experience-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Right-align the meta line */
+.experience-cards .info-meta {
+  margin: 0;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* ── Icon & Title shared styles ── */
+.card-icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+/* SKILL CARDS */
+.skill-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skill-card {
+  display: block;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s, transform 0.2s;
+  color: #fff;
+}
+
+/* CONTACT CARDS */
+.contact-card,
+.contact-card h3 {
+  text-decoration: none !important;
+}
+
+.contact-cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  margin-top: 2rem;
+}
+
+.contact-card {
+  display: block;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s, transform 0.2s;
+  color: #fff;
+}
+.contact-card:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-4px);
+}
+
+.card-icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0.75rem;
+  color: #fff;
 }
