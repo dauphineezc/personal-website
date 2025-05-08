@@ -1,18 +1,21 @@
-'use client';                          // ← need this to use usePathname
-import './globals.css';
-import { usePathname } from 'next/navigation';
-import { ReactNode } from 'react';
+// src/app/layout.tsx
+import './globals.css'
+import { ReactNode } from 'react'
+
+export const metadata = {
+  title: 'Zoe Dauphinee • Portfolio',
+  description: 'CS Student @ NYU — About, Experience, Contact',
+}
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  const path = usePathname();
-  const isHome = path === '/';
-
   return (
     <html lang="en">
       <body>
-        {/* main content */}
-        <main>{children}</main>
+        {/* you can style your <main> via plain CSS classes in globals.css */}
+        <main className="page-container">
+          {children}
+        </main>
       </body>
     </html>
-  );
+  )
 }
