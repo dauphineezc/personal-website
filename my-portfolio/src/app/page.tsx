@@ -29,7 +29,7 @@ export default function HomePage() {
         />
         <div className="profile-overlay">
           <Image
-            src="/profile.jpg"
+            src="/profile.JPG"
             alt="Zoe Dauphinee"
             width={120}
             height={120}
