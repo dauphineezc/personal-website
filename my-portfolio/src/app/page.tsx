@@ -42,7 +42,7 @@ export default function HomePage() {
       <div className="profile-bio">
         <h1>Zoë Dauphinee</h1>
         <p>
-          NYU Computer Science | Software Engineer | minor change
+          NYU Computer Science | Software Engineer
         </p>
       </div>
 
