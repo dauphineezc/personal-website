@@ -7,12 +7,12 @@
   position: relative;
   background: linear-gradient(to bottom, 
     transparent 0%, 
-    rgba(255, 255, 255, 0.05) 40%, 
-    rgba(255, 255, 255, 0.12) 80%, 
-    rgba(255, 255, 255, 0.15) 100%
+    rgba(255, 255, 255, 0.02) 30%, 
+    rgba(255, 255, 255, 0.05) 60%, 
+    rgba(255, 255, 255, 0.05) 100%
   );
-  height: 80px;
-  margin-top: -30px;
+  height: 100px;
+  margin-top: -40px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -31,6 +31,7 @@
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .read-more-btn:hover {
@@ -42,10 +43,234 @@
 .read-more-btn.show-less {
   background: rgba(113, 200, 255, 0.2);
   border-color: rgba(113, 200, 255, 0.4);
+  display: block;
+  margin: 1rem auto 0 auto;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .read-more-btn.show-less:hover {
   background: rgba(113, 200, 255, 0.3);
+}
+
+/* Enhanced Navbar Styles */
+.navbar-container {
+  max-width: 1200px !important;
+  padding: 0 3rem !important;
+  justify-content: space-between !important;
+}
+
+.navbar-brand {
+  font-family: Georgia, serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+  margin-right: auto !important;
+}
+
+.navbar-brand:hover {
+  color: #cd9aff !important;
+}
+
+.navbar-links {
+  display: flex !important;
+  gap: 3rem !important;
+  margin-left: auto !important;
+}
+
+.navbar-link {
+  color: #f3f4f6 !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  padding: 0.5rem 0 !important;
+  border-radius: 0 !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  background: none !important;
+  border: none !important;
+}
+
+/* Dynamic underline on hover */
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #71c8ff, #cd9aff);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+.navbar-link:hover {
+  color: #cd9aff !important;
+  background: none !important;
+}
+
+/* Active state with color tint and bold underline */
+.navbar-link.active {
+  color: #cd9aff !important;
+  font-weight: 600 !important;
+  background: none !important;
+  border: none !important;
+}
+
+.navbar-link.active::after {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #71c8ff, #cd9aff);
+}
+
+/* Resume page modernization */
+.resume-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.resume-tab {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  color: #f3f4f6;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.resume-tab:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+.resume-tab.active {
+  background: linear-gradient(135deg, #71c8ff, #cd9aff);
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.resume-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 400px;
+   text-align: left;
+}
+
+.resume-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.resume-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.resume-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.resume-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.resume-card h3 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.25rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.resume-meta {
+  color: #f8f8f8;
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.95;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.resume-card ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #fafafa;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.resume-card li {
+  margin-bottom: 0.75rem;
+}
+
+.resume-card a {
+  color: #70c8ff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.resume-card a:hover {
+  color: #8550ff;
+}
+
+/* Skills grid layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.skill-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.skill-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.skill-item h3 {
+  color: #cd9aff;
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+}
+
+.skill-item p {
+  color: #f3f4f6;
+  margin: 0;
+  line-height: 1.5;
 }
 
 /* About page text justification */
@@ -93,8 +318,8 @@
 /* Mobile responsive styles */
 @media (max-width: 768px) {
   .fade-gradient {
-    height: 60px;
-    margin-top: -20px;
+    height: 80px;
+    margin-top: -30px;
   }
   
   .read-more-btn {
@@ -114,5 +339,43 @@
 
   .gallery-image {
     height: 250px;
+  }
+
+  /* Enhanced mobile navbar */
+  .navbar-container {
+    padding: 0 1.5rem !important;
+  }
+  
+  .navbar-links {
+    gap: 2rem !important;
+  }
+  
+  .navbar-link {
+    font-size: 0.9rem;
+  }
+
+  /* Resume page mobile styles */
+  .resume-tabs {
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+  
+  .resume-tab {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .resume-content {
+    padding: 1.5rem;
+  }
+  
+  .resume-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }

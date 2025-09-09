@@ -18,41 +18,26 @@ export default function ResumePage() {
   }
 
   return (
-    <div className="profile-card">
+    <div className="home-container">
       {/* Header */}
-      <div className="profile-header">
+      <div className="home-hero">
         <Image
-          src="/header.jpeg"
-          alt="City Skyline"
-          width={800}
-          height={240}
-          className="header-img"
+          src="/profile.JPG"
+          alt="Zoë Dauphinee"
+          width={180}
+          height={180}
+          className="home-profile-image"
         />
-        <div className="profile-overlay">
-          <Image
-            src="/profile.JPG"
-            alt="Zoe Dauphinee"
-            width={120}
-            height={120}
-            className="avatar-img"
-          />
-        </div>
-      </div>
-
-      {/* Bio */}
-      <div className="profile-bio">
-        <h1>Zoë Dauphinee</h1>
-        <p>
-          Full Stack Software Engineer
-        </p>
+        <h1 className="home-title">Zoë Dauphinee</h1>
+        <p className="home-subtitle">Full Stack Software Engineer</p>
       </div>
 
       {/* Tabs */}
-      <div className="tab-buttons">
+      <div className="resume-tabs">
         {tabs.map((tab) => (
           <button
             key={tab}
-            className={`tab-button${activeTab === tab ? ' active' : ''}`}
+            className={`resume-tab${activeTab === tab ? ' active' : ''}`}
             onClick={() => setActiveTab(tab)}
           >
             {tab}
@@ -61,15 +46,15 @@ export default function ResumePage() {
       </div>
 
       {/* Content */}
-      <div className="tab-content">
+      <div className="resume-content">
 
         {/* Experience */}
         {activeTab === 'Experience' && (
-          <div className="experience-cards">
-            <div className="vertical-card">
-              <div className="card-header">
+          <div className="resume-section">
+            <div className="resume-card">
+              <div className="resume-card-header">
                 <h3>Full Stack Software Developer, Greater Midland</h3>
-                <p className="info-meta">July 2025 – Present</p>
+                <p className="resume-meta">July 2025 – Present</p>
               </div>
               <div className="experience-content">
                 <ul className="list-disc list-inside">
@@ -104,10 +89,10 @@ export default function ResumePage() {
               </div>
             </div>
 
-            <div className="vertical-card">
-              <div className="card-header">
+            <div className="resume-card">
+              <div className="resume-card-header">
                 <h3>Software Engineer Intern, Overland-Tandberg</h3>
-                <p className="info-meta">May 2024 – August 2024</p>
+                <p className="resume-meta">May 2024 – August 2024</p>
               </div>
               <div className="experience-content">
                 <ul className="list-disc list-inside">
@@ -145,11 +130,12 @@ export default function ResumePage() {
         )}
 
 
-        {/* Projects as full-width cards */}
+        {/* Projects */}
         {activeTab === 'Projects' && (
-          <div className="project-cards">
-            <div className="vertical-card">
-              <h3>Legal Document Analyzer, On-Device AI Builders Hackathon (Qualcomm, Microsoft, LM Studio)</h3>
+          <div className="resume-section">
+            <div className="resume-card">
+              <h3>Legal Document Analyzer</h3>
+              <h5 className="resume-meta">On-Device AI Builders Hackathon - Qualcomm, Microsoft, LM Studio</h5>
               <ul className="list-disc list-inside">
                 <li>Developed a localized AI agent using Python, Flask, and LM Studio for comprehensive risk and bias assessments of legal documents.</li>
                 <li>Leveraged Microsoft&apos;s ONNX Runtime and LM Studio for secure, on-device inference with optimized speed, model accuracy, and cost effectiveness.</li>
@@ -181,41 +167,41 @@ export default function ResumePage() {
           </div>
         )}
 
-        {/* Skills as small cards */}
+        {/* Skills */}
         {activeTab === 'Skills' && (
-          <div className="skill-cards">
-            <div className="vertical-card">
-              <h3>Programming Languages</h3>
+          <div className="skills-grid">
+            <div className="skill-item">
+              <h4>Programming Languages</h4>
               <p>Python, Java, Javascript, HTML/CSS, C, C++</p>
             </div>
-            <div className="vertical-card">
-              <h3>Frameworks & Libraries</h3>
+            <div className="skill-item">
+              <h4>Frameworks & Libraries</h4>
               <p>React, Flask, Node.js, Express.js</p>
             </div>
-            <div className="vertical-card">
-              <h3>Cloud & Hosting Platforms</h3>
+            <div className="skill-item">
+              <h4>Cloud & Hosting Platforms</h4>
               <p>Firebase (Auth, Firestore, Hosting), Vercel, AWS (S3, Cloud Concepts)</p>
             </div>
-            <div className="vertical-card">
-              <h3>Developer Tools & Services</h3>
+            <div className="skill-item">
+              <h4>Developer Tools & Services</h4>
               <p>GitHub, GitHub Actions (CI/CD, scheduling), Visual Studio Code, Visual Studio, PyCharm, Jira, MongoDB</p>
             </div>
-            <div className="vertical-card">
-              <h3>Operating Systems</h3>
+            <div className="skill-item">
+              <h4>Operating Systems</h4>
               <p>Linux (Ubuntu), macOS, Microsoft Windows</p>
             </div>
           </div>
         )}
 
-        {/* Education as full-width cards */}
+        {/* Education */}
         {activeTab === 'Education' && (
-          <div className="education-cards">
-            <div className="vertical-card">
-            <div className="card-header">
+          <div className="resume-section">
+            <div className="resume-card">
+            <div className="resume-card-header">
                 <h3>B.S. Computer Science, New York University</h3>
-                <p className="info-meta">September 2021 – May 2025</p>
+                <p className="resume-meta">September 2021 – May 2025</p>
               </div>
-              <p>Relevant coursework:</p>
+              <h4>Relevant coursework:</h4>
               <ul className="list-disc list-inside">
               <li>Artificial Intelligence</li>
               <li>Computer Architecture and Organization</li>
