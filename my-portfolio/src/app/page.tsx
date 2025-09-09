@@ -14,7 +14,7 @@ type Tab = 'Education' | 'Experience' | 'Projects' | 'Skills' | 'Contact'
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState<Tab>('Education')
-  const tabs: Tab[] = ['Education', 'Experience', 'Projects', 'Skills', 'Contact']
+  const tabs: Tab[] = ['Experience', 'Projects', 'Skills', 'Education', 'Contact']
 
   return (
     <div className="profile-card">
@@ -62,43 +62,20 @@ export default function HomePage() {
       {/* Content */}
       <div className="tab-content">
 
-        {/* Education as full-width cards */}
-        {activeTab === 'Education' && (
-          <div className="education-cards">
-            <div className="vertical-card">
-            <div className="card-header">
-                <h3>B.S. Computer Science, New York University</h3>
-                <p className="info-meta">September 2021 – May 2025</p>
-              </div>
-              <p>Relevant coursework:</p>
-              <ul className="list-disc list-inside">
-                <li>Data Structures and Algorithms</li>
-                <li>Object Oriented Programming</li>
-                <li>Data Analysis and Statistics</li>
-                <li>Computer Architecture and Organization</li>
-                <li>Artificial Intelligence</li>
-                <li>Operating Systems</li>
-                <li>Computer Networking</li>
-                <li>Machine Learning</li>
-              </ul>
-            </div>
-          </div>
-        )}
-
         {/* Experience */}
         {activeTab === 'Experience' && (
           <div className="experience-cards">
             <div className="vertical-card">
               <div className="card-header">
-                <h3>Software Developer, NYU Athletics</h3>
-                <p className="info-meta">October 2024 – May 2025</p>
+                <h3>Full Stack Software Developer, Greater Midland</h3>
+                <p className="info-meta">July 2025 – Present</p>
               </div>
               <ul className="list-disc list-inside">
-                <li>Developed a full-stack application for the NYU Taekwondo team using React.js, Node.js, and MongoDB.</li>
-                <li>Integrated Stripe API for automated payments, Google Calendar API for event scheduling, and SendGrid API for automated email notifications.</li>
-                <li>Built a role-based dashboard for tracking dues, managing event registrations, and visualizing payment data with Chart.js.</li>
-                <li>Used a CI/CD pipeline for efficient deployment.</li>
-              </ul>
+                <li>Built a full-stack League Management System with custom user roles, registration, scheduling, and standings features using Firebase and React, improving operational efficiency and user experience for 400+ local athletes and staff.</li>
+                <li>Developed a role-based authentication system via Firebase Auth with secure, scalable routing logic to tailor feature access across three distinct user types.</li>
+                <li>Replaced manually updated PDFs by deploying a fully custom activities calendar that auto-ingests RecTrac CSVs via FTP, rendering dynamic, filterable weekly views that reduced staff workload and improved accessibility for 300,000+ community members.</li>
+                <li>Led UI/UX design and stakeholder collaboration for a new WordPress-based website, replacing legacy Squarespace infrastructure and rebuilding the organization’s public presence to align with accessibility, usability, and brand standards.</li>
+                <li>Designed responsive web interfaces and interactive components using React, HTML/CSS, and JavaScript, achieving SEO readiness and WCAG compliance for public-facing platforms.</li>
             </div>
 
             <div className="vertical-card">
@@ -107,11 +84,11 @@ export default function HomePage() {
                 <p className="info-meta">May 2024 – August 2024</p>
               </div>
               <ul className="list-disc list-inside">
-                <li>Implemented a new Phone Home service using Flask-RESTx, integrating it into the existing microservice framework as a shipping product.</li>
-                <li>Developed a client-side mechanism for anonymized usage data collection, ensuring privacy compliance and enabling nuanced analysis.</li>
-                <li>Collaborated with the DBA to define the schema and marshalled data against custom Flask-RESTx models to prevent data loss.</li>
-                <li>Presented the completed project to the COO, highlighting its business-alignment and analytics capabilities.</li>
-                <li>Built a Windows desktop service to monitor and record employee backup activities, integrating it into an automated backup pipeline.</li>
+              <li>Engineered a Flask-RESTx “Phone Home” service integrated into the existing microservice framework, enabling eal-time device telemetry for deployed units.</li>
+              <li>Designed a client-side data collection mechanism to anonymize and transmit usage metrics, ensuring compliance with privacy standards and enabling advanced usage analytics.</li>
+              <li>Collaborated with the database administrator to define the schema and implemented robust validation using custom Flask marshalling logic, eliminating type mismatches, preventing potential data loss, and ensuring system integrity.</li>
+              <li>Delivered a final project demo to the Chief Operating Officer, showcasing the project's alignment with business goals and its facilitation of data-driven decision-making.</li>
+              <li>Created a Windows desktop service to monitor and log employee backup compliance, integrating with existing automated backup infrastructure to increase backup policy adherence across the organization.</li>
               </ul>
             </div>
           </div>
@@ -124,9 +101,9 @@ export default function HomePage() {
             <div className="vertical-card">
               <h3>Legal Document Analyzer, On-Device AI Builders Hackathon (Qualcomm, Microsoft, LM Studio)</h3>
               <ul className="list-disc list-inside">
-                <li>Developed a localized AI agent using Python, Flask, and LM Studio for comprehensive risk assessments of legal documents, analyzing clauses for potential risks and biases, winning first place for its innovative approach to AI localization.</li>
-                <li>Leveraged Microsoft’s ONNX Runtime and LM Studio to optimize on-device processing, ensuring data privacy, model accuracy, and cost effectiveness.</li>
-                <li>Featured by Qualcomm for its cutting-edge implementation and transformative potential.</li>
+                <li>Developed a localized AI agent using Python, Flask, and LM Studio for comprehensive risk and bias assessments of legal documents.</li>
+                <li>Leveraged Microsoft’s ONNX Runtime and LM Studio for secure, on-device inference with optimized speed, model accuracy, and cost effectiveness.</li>
+                <li>Won first place and was featured by Qualcomm for its innovative approach and transformative potential to AI localization.</li>
               </ul>
 
               {/* extra links */}
@@ -170,20 +147,47 @@ export default function HomePage() {
         {activeTab === 'Skills' && (
           <div className="skill-cards">
             <div className="vertical-card">
-              <h3>Languages</h3>
-              <p>Python, C, C++, Java, HTML/CSS, JavaScript</p>
+              <h3>Programming Languages</h3>
+              <p>Python, Java, Javascript, HTML/CSS, C, C++</p>
             </div>
             <div className="vertical-card">
-              <h3>Frameworks</h3>
-              <p>Flask, React, Node.js</p>
+              <h3>Frameworks & Libraries</h3>
+              <p>React, Flask, Node.js, Express.js</p>
             </div>
             <div className="vertical-card">
-              <h3>Developer Tools</h3>
-              <p>Github, VS Code, Visual Studio, PyCharm, Jira, MongoDB</p>
+              <h3>Cloud & Hosting Platforms</h3>
+              <p>Firebase (Auth, Firestore, Hosting), Vercel, AWS (S3, Cloud Concepts)</p>
+            </div>
+            <div className="vertical-card">
+              <h3>Developer Tools & Services</h3>
+              <p>GitHub, GitHub Actions (CI/CD, scheduling), Visual Studio Code, Visual Studio, PyCharm, Jira, MongoDB</p>
             </div>
             <div className="vertical-card">
               <h3>Operating Systems</h3>
               <p>Linux (Ubuntu), macOS, Microsoft Windows</p>
+            </div>
+          </div>
+        )}
+
+        {/* Education as full-width cards */}
+        {activeTab === 'Education' && (
+          <div className="education-cards">
+            <div className="vertical-card">
+            <div className="card-header">
+                <h3>B.S. Computer Science, New York University</h3>
+                <p className="info-meta">September 2021 – May 2025</p>
+              </div>
+              <p>Relevant coursework:</p>
+              <ul className="list-disc list-inside">
+                <li>Data Structures and Algorithms</li>
+                <li>Object Oriented Programming</li>
+                <li>Data Analysis and Statistics</li>
+                <li>Computer Architecture and Organization</li>
+                <li>Artificial Intelligence</li>
+                <li>Operating Systems</li>
+                <li>Computer Networking</li>
+                <li>Machine Learning</li>
+              </ul>
             </div>
           </div>
         )}
