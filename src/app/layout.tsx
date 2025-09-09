@@ -1,5 +1,6 @@
 // src/app/layout.tsx
 import './globals.css'
+import './experience-styles.css'
 import { ReactNode } from 'react'
 import Navbar from '@/components/Navbar'
 
