@@ -3,18 +3,11 @@
 import { useState } from 'react'
 import Image from 'next/image'
 
-import {
-  EnvelopeClosedIcon,
-  MobileIcon,
-  GitHubLogoIcon,
-  LinkedInLogoIcon,
-} from '@radix-ui/react-icons'
+type Tab = 'Education' | 'Experience' | 'Projects' | 'Skills'
 
-type Tab = 'Education' | 'Experience' | 'Projects' | 'Skills' | 'Contact'
-
-export default function HomePage() {
-  const [activeTab, setActiveTab] = useState<Tab>('Education')
-  const tabs: Tab[] = ['Experience', 'Projects', 'Skills', 'Education', 'Contact']
+export default function ResumePage() {
+  const [activeTab, setActiveTab] = useState<Tab>('Experience')
+  const tabs: Tab[] = ['Experience', 'Projects', 'Skills', 'Education']
 
   return (
     <div className="profile-card">
@@ -42,7 +35,7 @@ export default function HomePage() {
       <div className="profile-bio">
         <h1>Zoë Dauphinee</h1>
         <p>
-          NYU Computer Science | Software Engineer
+          Full Stack Software Engineer
         </p>
       </div>
 
@@ -85,10 +78,10 @@ export default function HomePage() {
                 <p className="info-meta">May 2024 – August 2024</p>
               </div>
               <ul className="list-disc list-inside">
-              <li>Engineered a Flask-RESTx “Phone Home” service integrated into the existing microservice framework, enabling eal-time device telemetry for deployed units.</li>
+              <li>Engineered a Flask-RESTx &quot;Phone Home&quot; service integrated into the existing microservice framework, enabling eal-time device telemetry for deployed units.</li>
               <li>Designed a client-side data collection mechanism to anonymize and transmit usage metrics, ensuring compliance with privacy standards and enabling advanced usage analytics.</li>
               <li>Collaborated with the database administrator to define the schema and implemented robust validation using custom Flask marshalling logic, eliminating type mismatches, preventing potential data loss, and ensuring system integrity.</li>
-              <li>Delivered a final project demo to the Chief Operating Officer, showcasing the project&apos;s alignment with business goals and its facilitation of data-driven decision-making.</li>
+               <li>Delivered a final project demo to the Chief Operating Officer, showcasing the project&apos;s alignment with business goals and its facilitation of data-driven decision-making.</li>
               <li>Created a Windows desktop service to monitor and log employee backup compliance, integrating with existing automated backup infrastructure to increase backup policy adherence across the organization.</li>
               </ul>
             </div>
@@ -103,21 +96,9 @@ export default function HomePage() {
               <h3>Legal Document Analyzer, On-Device AI Builders Hackathon (Qualcomm, Microsoft, LM Studio)</h3>
               <ul className="list-disc list-inside">
                 <li>Developed a localized AI agent using Python, Flask, and LM Studio for comprehensive risk and bias assessments of legal documents.</li>
-                <li>Leveraged Microsoft’s ONNX Runtime and LM Studio for secure, on-device inference with optimized speed, model accuracy, and cost effectiveness.</li>
+                <li>Leveraged Microsoft&apos;s ONNX Runtime and LM Studio for secure, on-device inference with optimized speed, model accuracy, and cost effectiveness.</li>
                 <li>Won first place and was featured by Qualcomm for its innovative approach and transformative potential to AI localization.</li>
               </ul>
-
-              {/* extra links */}
-              {/* <div className="mt-4 space-x-4 text-sm">
-                <a
-                  href="https://linkedin.com/posts/…qualcomm-post…"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-gray-200"
-                >
-                  Read our blog post
-                </a>
-              </div> */}
 
               <div className="mt-4 space-x-4 text-sm">
                 <a
@@ -190,38 +171,6 @@ export default function HomePage() {
                 <li>Machine Learning</li>
               </ul>
             </div>
-          </div>
-        )}
-
-        {/* Contact as 2-column square cards */}
-        {activeTab === 'Contact' && (
-          <div className="contact-cards">
-            <a href="mailto:zoe.dauphinee@gmail.com" className="contact-card">
-              <EnvelopeClosedIcon className="card-icon" />
-              <h3>Email</h3>
-            </a>
-            <a href="tel:9894889848" className="contact-card">
-              <MobileIcon className="card-icon" />
-              <h3>Phone</h3>
-            </a>
-            <a
-              href="https://github.com/dauphineezc"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-card"
-            >
-              <GitHubLogoIcon className="card-icon" />
-              <h3>GitHub</h3>
-            </a>
-            <a
-              href="https://linkedin.com/in/zoedauphinee"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-card"
-            >
-              <LinkedInLogoIcon className="card-icon" />
-              <h3>LinkedIn</h3>
-            </a>
           </div>
         )}
 

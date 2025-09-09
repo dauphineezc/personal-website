@@ -1,17 +1,18 @@
 // src/app/layout.tsx
 import './globals.css'
 import { ReactNode } from 'react'
+import Navbar from '@/components/Navbar'
 
 export const metadata = {
-  title: 'Zoe Dauphinee • Portfolio',
-  description: 'CS Student @ NYU — About, Experience, Contact',
+  title: 'Zoë Dauphinee • Portfolio',
+  description: 'Full Stack Software Engineer — About, Experience, Contact',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        {/* you can style your <main> via plain CSS classes in globals.css */}
+        <Navbar />
         <main className="page-container">
           {children}
         </main>
