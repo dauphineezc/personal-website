@@ -28,12 +28,36 @@ export default function HomePage() {
         <p>
           I recently graduated from New York University with a B.S. in Computer Science. One of my proudest achievements from my
           time at NYU was winning the Qualcomm + Microsoft On-Device AI Builders Hackathon, where my team developed an innovative 
-          localized AI-powered contract analyzer to help make complex legal documents more accessible. While I love any sort of tech 
+          localized AI-powered contract analyzer to help make complex legal documents more comprehendable. While I love any sort of tech 
           development, I&apos;m particularly passionate about any project that uses technology to make the world a more accessible 
           and equitable place.
         </p>
+        
+        <div className="photo-gallery">
+          <div className="gallery-item">
+            <Image
+              src="/tkd_pic.JPG"
+              alt="NYU Taekwondo Eboard Photo"
+              width={200}
+              height={200}
+              className="gallery-image"
+            />
+            <p className="gallery-caption">Proud to both have competed on and served as Communications Chair for the NYU Taekwondo team</p>
+          </div>
+          <div className="gallery-item">
+            <Image
+              src="/mochi_pic.JPG"
+              alt="Mochi"
+              width={200}
+              height={200}
+              className="gallery-image"
+            />
+            <p className="gallery-caption">My dog, Mochi, on a road trip</p>
+          </div>
+        </div>
+        
         <p>
-          During my time at NYU, I was a proud member of the Taekwondo team. Since graduating, I&apos;ve switched over to boxing; I enjoy 
+          During my time at NYU, I was a member of the Taekwondo team. Since graduating, I&apos;ve switched over to boxing; I enjoy 
           being active and learning new skills! When I&apos;m not coding or in the gym, I enjoy unwinding with a good book and my dog 
           by my side. Feel free to reach out if you&apos;d like to chat about tech, projects, or just to say hi - I am always eager to 
           learn, grow, and collaborate!
