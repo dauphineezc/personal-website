@@ -24,13 +24,13 @@ export default function ContactPage() {
       <div className="home-about">
         <h2>Contact Information</h2>
         <p>
-          I&apos;m always interested in new opportunities, collaborations, and interesting projects. 
+          I&apos;m always interested in new learningopportunities, collaborations, and interesting projects. 
           Whether you&apos;re looking for a software engineer, have a project idea, or just want to chat 
-          about technology, feel free to reach out!
+          about shared interests, feel free to reach out!
         </p>
         <p>
-          I typically respond to emails within 24 hours and am available for calls or video chats 
-          by appointment. Let&apos;s discuss how we can work together to bring your ideas to life.
+          I typically respond to emails within 24 hours and am available for calls
+          by appointment. Let&apos;s discuss how we can work together to bring exciting ideas to life!
         </p>
       </div>
 
@@ -39,12 +39,10 @@ export default function ContactPage() {
         <a href="mailto:zoe.dauphinee@gmail.com" className="contact-card">
           <EnvelopeClosedIcon className="card-icon" />
           <h3>Email</h3>
-          <p>zoe.dauphinee@gmail.com</p>
         </a>
         <a href="tel:9894889848" className="contact-card">
           <MobileIcon className="card-icon" />
           <h3>Phone</h3>
-          <p>(989) 488-9848</p>
         </a>
         <a
           href="https://github.com/dauphineezc"
@@ -54,7 +52,6 @@ export default function ContactPage() {
         >
           <GitHubLogoIcon className="card-icon" />
           <h3>GitHub</h3>
-          <p>@dauphineezc</p>
         </a>
         <a
           href="https://linkedin.com/in/zoedauphinee"
@@ -64,7 +61,6 @@ export default function ContactPage() {
         >
           <LinkedInLogoIcon className="card-icon" />
           <h3>LinkedIn</h3>
-          <p>@zoedauphinee</p>
         </a>
       </div>
     </div>
