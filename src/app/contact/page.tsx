@@ -26,7 +26,7 @@ export default function ContactPage() {
         <p>
           I&apos;m always interested in new learning opportunities, collaborations, and interesting projects. 
           Whether you&apos;re looking for a software engineer, have a project idea, or just want to chat 
-          about shared interests, don't hesitate to get in touch!
+          about shared interests, don&apos;t hesitate to get in touch!
         </p>
       </div>
 
