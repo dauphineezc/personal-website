@@ -42,7 +42,7 @@ export default function HomePage() {
               height={200}
               className="gallery-image"
             />
-            <p className="gallery-caption">NYU TKD Board Photo</p>
+            <p className="gallery-caption" style={{ textAlign: 'center' }}>NYU TKD Board Photo</p>
           </div>
           <div className="gallery-item">
             <Image
@@ -52,7 +52,7 @@ export default function HomePage() {
               height={200}
               className="gallery-image"
             />
-            <p className="gallery-caption">Mochi on a road trip</p>
+            <p className="gallery-caption" style={{ textAlign: 'center' }}>Mochi on a road trip</p>
           </div>
         </div>
         

@@ -24,13 +24,9 @@ export default function ContactPage() {
       <div className="home-about">
         <h2>Contact Information</h2>
         <p>
-          I&apos;m always interested in new learningopportunities, collaborations, and interesting projects. 
+          I&apos;m always interested in new learning opportunities, collaborations, and interesting projects. 
           Whether you&apos;re looking for a software engineer, have a project idea, or just want to chat 
-          about shared interests, feel free to reach out!
-        </p>
-        <p>
-          I typically respond to emails within 24 hours and am available for calls
-          by appointment. Let&apos;s discuss how we can work together to bring exciting ideas to life!
+          about shared interests, don't hesitate to get in touch!
         </p>
       </div>
 
